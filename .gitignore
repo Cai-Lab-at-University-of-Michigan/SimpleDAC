@@ -50,3 +50,16 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+Examples/*/pioasm
+Examples/*/pico-sdk
+Examples/*/my_project.bin
+Examples/*/my_project.dis
+Examples/*/my_project.uf2
+Examples/*/generated
+Examples/*/elf2uf2
+Examples/*/cmake_install.cmake
+Examples/*/_deps
+Examples/*/Makefile
+Examples/*/CMakeFiles
+Examples/*/CMakeCache.txt
