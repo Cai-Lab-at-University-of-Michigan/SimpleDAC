@@ -6,7 +6,7 @@ set(PICO_SDK_FETCH_FROM_GIT on)
 
 # pico_sdk_import.cmake is a single file copied from this SDK
 # note: this must happen before project()
-include(pico_sdk_init.cmake)
+include(pico_sdk_import.cmake)
 
 project(my_project)
 
