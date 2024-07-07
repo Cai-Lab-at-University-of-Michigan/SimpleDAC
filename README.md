@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/518102784.svg)](https://zenodo.org/doi/10.5281/zenodo.12682252)
+
 # SimpleDAC
 An open source hardware interface for experimental automation
 
