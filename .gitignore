@@ -63,3 +63,4 @@ Examples/*/_deps
 Examples/*/Makefile
 Examples/*/CMakeFiles
 Examples/*/CMakeCache.txt
+.DS_Store
