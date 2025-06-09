@@ -66,3 +66,5 @@ Examples/*/CMakeCache.txt
 .DS_Store
 PCB/~SimpleDAC.kicad_pcb.lck
 /PCB/SimpleDAC-backups
+
+Examples/*/build/
