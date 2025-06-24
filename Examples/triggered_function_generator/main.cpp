@@ -17,7 +17,6 @@ int main() {
     // Initialize Input Pin
     gpio_init(INPUT_PIN);
     gpio_set_dir(INPUT_PIN, GPIO_IN);
-    gpio_pull_up(INPUT_PIN); // Optional: Pull-up resistor if button goes to GND
 
     // Loop forever
     while(1) {
