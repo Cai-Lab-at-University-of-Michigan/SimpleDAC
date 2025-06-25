@@ -1,0 +1,16 @@
+Designator(s),Component,#,Each,Total,Source and Part Number,URL
+OPA188,TI OPA188,2,$1.91,$3.82,DigiKey,OPA188AIDR,https://www.digikey.com/en/products/detail/texas-instruments/OPA188AIDR/4135406
+DAC8560,TI DAC8560,2,$8.04,$16.08,DigiKey,DAC8560ICDGKT,https://www.digikey.com/en/products/detail/texas-instruments/DAC8560ICDGKT/1278908
+C_LOAD, C_COMP,100pF Film Capacitor,4,$1.30,$5.20,DigiKey,C322C101F1G5TA,https://www.digikey.com/en/products/detail/kemet/C322C101F1G5TA/3725991
+R_G1,11KΩ Resistor 0.1%,2,$1.19,$2.38,DigiKey,YR1B11KCC,https://www.digikey.com/en/products/detail/te-connectivity-passive-product/YR1B11KCC/2390691
+R_G2,8.25KΩ Resistor 0.1%,2,$0.82,$1.64,DigiKey,YR1B8K25CC,https://www.digikey.com/en/products/detail/te-connectivity-passive-product/YR1B8K25CC/2390957
+R_FB,33KΩ Resistor 0.1%,2,$0.60,$1.20,DigiKey,MFP-25BRD52-33K,https://www.digikey.com/en/products/detail/yageo/MFP-25BRD52-33K/2058815
+R_ISO,10KΩ Resistor 0.1%,2,$0.60,$1.20,DigiKey,10KADCT-ND,https://www.digikey.com/en/products/detail/yageo/MFP-25BRD52-10K/2058797
+R_SPLIT,10KΩ Resistor 0.1%,2,$0.60,$1.20,DigiKey,10KADCT-ND,https://www.digikey.com/en/products/detail/yageo/MFP-25BRD52-10K/2058797
+R_DATA,12Ω Resistor 1%,2,$0.10,$0.20,DigiKey,MF0207FTE52-12R,https://www.digikey.com/en/products/detail/yageo/MF0207FTE52-12R/9125395
+GPxx and DACx,BNC Connector,6,$2.06,$12.36,DigiKey,CONBNC002,https://www.digikey.com/en/products/detail/te-connectivity-linx/CONBNC002/16013841
+PWR,Banana Receptacle,3,$2.55,$7.65,DigiKey,CT3151SP-2,https://www.digikey.com/en/products/detail/cal-test-electronics/CT3151SP-2/6005547
+Header Connector,Header Connector,2,$1.10,$2.20,DigiKey,PPTC201LFBN-RC,https://www.digikey.com/en/products/detail/sullins-connector-solutions/PPTC201LFBN-RC/810158
+Headers,Headers,2,$1.10,$2.20,DigiKey,61302011121,https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/61302011121/4846860
+Raspberry Pi 2,Raspberry Pi Pico 2,1,$5.00,$5.00,DigiKey,SC1631,https://www.digikey.com/en/product-highlight/r/raspberry-pi/raspberry-pi-sc1631-pico-2
+PCB,This Work (Fig. board_raw),1,$12.63,$12.63,OshPark,custom,
