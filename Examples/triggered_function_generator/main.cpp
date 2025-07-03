@@ -7,11 +7,15 @@
 
 #define INPUT_PIN 28
 
-#define TRIGGER 0 // Trigger mode
-#define FUNCT 5   // Function to output (see below)
+#define TRIGGER 1 // Trigger mode
+#define FUNCT 3  // Function to output (see below)
 
 /*
     1 => Constant value
+    2 => Sawtooth
+    3 => Square
+    4 => Sine wave
+    5 => Triangle
 */
 
 #define PERIOD 10000 // us
