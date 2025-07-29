@@ -9,6 +9,7 @@ This repository is split into two folders:
 
 - [/PCB](/PCB/) contains the KiCAD files used to produce the PCB.
 - [/Examples](/Examples/) contains code examples for SimpleDAC firmware.
+- [/Caddy](/Caddy/) contains the 3D modeling files for the SimpleDAC case.
 
 ## Building code examples
 All code examples are provided with example CMake files. These can be built by following the [Pico SDK](https://github.com/raspberrypi/pico-sdk) install and build instructions.
