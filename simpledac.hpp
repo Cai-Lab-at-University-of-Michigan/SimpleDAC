@@ -10,7 +10,7 @@
 #include "hardware/spi.h"
 
 // SPI Frequency definitions
-#define SPI_FREQ 40
+#define SPI_FREQ 20
 #define MHz (1000 * 1000)
 #define OUTPUT_BUFFER_SIZE 3
 
@@ -46,6 +46,7 @@ void initialize_simpledac()
     gpio_init(cs_pinA);
     gpio_set_dir(cs_pinA, GPIO_OUT);
     gpio_put(cs_pinA, 1);
+
     gpio_init(cs_pinB);
     gpio_set_dir(cs_pinB, GPIO_OUT);
     gpio_put(cs_pinB, 1);
@@ -53,10 +54,11 @@ void initialize_simpledac()
     // Turn on the two SPI busses
     spi_init(spiA, SPI_FREQ * MHz); // 1MHz
     // BUS -- BITS -- POLARITY -- PHASE -- ENDIAN
-    spi_set_format(spiA, 8, 0, 1, SPI_LSB_FIRST);
+    spi_set_format(spiA, 8, (spi_cpol_t) 0, (spi_cpha_t) 1, SPI_LSB_FIRST);
+    
     spi_init(spiB, SPI_FREQ * MHz); // 1MHz
     // BUS -- BITS -- POLARITY -- PHASE -- ENDIAN
-    spi_set_format(spiB, 8, 0, 1, SPI_LSB_FIRST);
+    spi_set_format(spiB, 8, (spi_cpol_t) 0, (spi_cpha_t) 1, SPI_LSB_FIRST);
 
     // Assign all GPIO pins for SPI
     gpio_set_function(sck_pinA, GPIO_FUNC_SPI);
@@ -69,7 +71,7 @@ void initialize_simpledac()
 
 void set_value_simpledac(int channel, unsigned short new_value)
 {
-    if (channel < 0 || channel > 1)
+    if (!(channel == 0 || channel == 1))
     {
         return;
     }
@@ -88,6 +90,7 @@ void set_value_simpledac(int channel, unsigned short new_value)
         cs_pin = cs_pinB;
     }
 
+    
     void *data_out_ptr = data_outA;
     if (channel == 1)
     {
@@ -95,10 +98,15 @@ void set_value_simpledac(int channel, unsigned short new_value)
     }
 
     // Casts the 2nd and 3rd byte of the buffer to a uint16_t and inverts the val
-    *(uint16_t *)(data_out_ptr + 1) = (new_value >> 8) | (new_value << 8);
+    uint16_t towrite = (new_value >> 8) | (new_value << 8);
+    uint8_t * towrite_proxy = (uint8_t *) &towrite;
+    //uint8_t * data_out = (uint8_t*) data_out_ptr;
+
+    ((uint8_t*) data_out_ptr)[1] = towrite_proxy[0];
+    ((uint8_t*) data_out_ptr)[2] = towrite_proxy[1];
 
     // Write the data with CS->LOW
     gpio_put(cs_pin, 0);
-    spi_write_blocking(spi, data_out_ptr, OUTPUT_BUFFER_SIZE);
+    spi_write_blocking(spi, (const uint8_t*)data_out_ptr, OUTPUT_BUFFER_SIZE);
     gpio_put(cs_pin, 1);
 }
